@@ -4,6 +4,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import com.myteststore.utilities.ReadPropertyFile;
+import com.teststore.enums.ConfigProperties;
 
 public class BaseTest {
 
@@ -13,7 +14,7 @@ public class BaseTest {
 	 */
 	@BeforeTest
 	public void setUp() throws Exception {
-		DriverFactory.initializeDriver(ReadPropertyFile.getValue("browser"), ReadPropertyFile.getValue("url"));
+		DriverFactory.initializeDriver(ReadPropertyFile.getValue(ConfigProperties.getBROWSER()), ReadPropertyFile.getValue(ConfigProperties.getURL()));
 	}
 
 	/*

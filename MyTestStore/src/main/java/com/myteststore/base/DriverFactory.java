@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+import com.teststore.enums.Browser;
 
 public class DriverFactory {
 
@@ -41,12 +44,15 @@ public class DriverFactory {
 	 */
 	public static void initializeDriver(String browser, String URL) {
 		if (Objects.isNull(getDriver())) {
-			if (browser.equals("chrome")) {
+
+			if (browser.equals(Browser.getCHROME())) {
 				setDriver(new ChromeDriver());
-			} else if (browser.equals("firefox")) {
+			} else if (browser.equals(Browser.getFIREFOX())) {
 				setDriver(new FirefoxDriver());
-			} else if (browser.equals("IE")) {
+			} else if (browser.equals(Browser.getEDGE())) {
 				setDriver(new EdgeDriver());
+			} else if (browser.equals(Browser.getIE())) {
+				setDriver(new InternetExplorerDriver());
 			}
 		}
 		getDriver().get(URL);

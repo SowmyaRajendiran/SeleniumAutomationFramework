@@ -1,5 +1,8 @@
 package com.myteststore.enums;
 
+/*
+ * Enum for framework constants
+ */
 public enum PathConstants {
 	USERDIRECTORY, PROPERTYFILEPATH;
 

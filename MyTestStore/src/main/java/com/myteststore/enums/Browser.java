@@ -1,7 +1,7 @@
 package com.myteststore.enums;
 
 /*
- * Enums for browser constants and Methods to convert them to lower case
+ * Enums for browser constants
  */
 public enum Browser {
 	CHROME, FIREFOX, EDGE, IE, SAFARI;

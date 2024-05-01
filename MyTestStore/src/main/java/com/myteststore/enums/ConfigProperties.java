@@ -1,7 +1,7 @@
 package com.myteststore.enums;
 
 /*
- * Enums for config properties constants and Methods to convert them to lower case
+ * Enums for config properties 
  */
 public enum ConfigProperties {
 BROWSER, URL;

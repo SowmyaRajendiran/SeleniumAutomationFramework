@@ -3,8 +3,8 @@ package com.myteststore.base;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
+import com.myteststore.enums.ConfigProperties;
 import com.myteststore.utilities.ReadPropertyFile;
-import com.teststore.enums.ConfigProperties;
 
 public class BaseTest {
 

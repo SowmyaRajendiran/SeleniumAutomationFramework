@@ -8,7 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-import com.teststore.enums.Browser;
+import com.myteststore.enums.Browser;
 
 public class DriverFactory {
 

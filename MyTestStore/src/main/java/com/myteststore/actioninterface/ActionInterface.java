@@ -2,6 +2,6 @@ package com.myteststore.actioninterface;
 
 import org.openqa.selenium.By;
 
-public abstract class ActionInterface {
-	protected abstract void click(By by);
+public interface ActionInterface {
+	public abstract void click(By by);
 }

@@ -1,4 +1,4 @@
-package com.teststore.enums;
+package com.myteststore.enums;
 
 /*
  * Enums for config properties constants and Methods to convert them to lower case

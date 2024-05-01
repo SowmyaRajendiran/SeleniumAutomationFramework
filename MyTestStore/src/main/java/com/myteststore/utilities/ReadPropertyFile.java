@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.Objects;
 import java.util.Properties;
 
+import com.myteststore.enums.PathConstants;
+
 
 public final class ReadPropertyFile {
 
@@ -21,7 +23,7 @@ public final class ReadPropertyFile {
 	static {
 		try {
 			FileInputStream file = new FileInputStream(
-					System.getProperty("user.dir") + "/src/test/resources/config/config.properties");
+					PathConstants.getPROPERTYFILEPATH());
 			property.load(file);
 
 		} catch (FileNotFoundException e) {

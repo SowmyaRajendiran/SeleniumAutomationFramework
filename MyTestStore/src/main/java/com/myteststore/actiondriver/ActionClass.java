@@ -3,11 +3,12 @@ package com.myteststore.actiondriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.myteststore.actioninterface.ActionInterface;
 import com.myteststore.base.DriverFactory;
 
-public class ActionClass {
+public class ActionClass implements ActionInterface {
 
-	protected void click(By element) {
+	public void click(By element) {
 		findElement(element).click();
 	}
 	

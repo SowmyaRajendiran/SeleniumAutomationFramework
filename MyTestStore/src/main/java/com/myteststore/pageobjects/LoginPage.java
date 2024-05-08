@@ -16,9 +16,9 @@ public final class LoginPage extends ActionClass {
 	/*
 	 * Description: Method to click Submit Button In LogIn Page
 	 */
-	public void signIn() throws InterruptedException {
-		enterText(ExplicitWaitCondition.PRESENCE,textboxEmail,"testautomationqa@gmail.com");
-		enterText(ExplicitWaitCondition.PRESENCE,textboxPassword,"Test@123");
+	public void signIn(String email, String password) throws InterruptedException {
+		enterText(ExplicitWaitCondition.PRESENCE,textboxEmail, email);
+		enterText(ExplicitWaitCondition.PRESENCE,textboxPassword,password);
 		Thread.sleep(3000);
 		click(ExplicitWaitCondition.CLICKABLE, buttonSubmit);
 	}

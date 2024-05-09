@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 
 import com.myteststore.actiondriver.ActionClass;
 import com.myteststore.enums.ExplicitWaitCondition;
+import com.myteststore.reports.ExtentManager;
+import com.myteststore.reports.ExtentReport;
 
 public class HomePage extends ActionClass {
 
@@ -15,6 +17,7 @@ public class HomePage extends ActionClass {
 	 */
 	public LoginPage clicksignin() {
 		click(ExplicitWaitCondition.CLICKABLE , buttonSignIn);
+		ExtentManager.getExtentTest().pass("Clicked Login Button");
 		return new LoginPage();
 		
 	}

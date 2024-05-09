@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 
 import com.myteststore.actiondriver.ActionClass;
 import com.myteststore.enums.ExplicitWaitCondition;
+import com.myteststore.reports.ExtentManager;
+import com.myteststore.reports.ExtentReport;
 
 public final class LoginPage extends ActionClass {
 
@@ -21,5 +23,6 @@ public final class LoginPage extends ActionClass {
 		enterText(ExplicitWaitCondition.PRESENCE,textboxPassword,password);
 		Thread.sleep(3000);
 		click(ExplicitWaitCondition.CLICKABLE, buttonSubmit);
+		ExtentManager.getExtentTest().pass("Clicked Submit Button");
 	}
 }

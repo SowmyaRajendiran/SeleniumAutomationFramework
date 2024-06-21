@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.myteststore.base.DriverFactory;
 import com.myteststore.enums.ExplicitWaitCondition;
+import com.myteststore.reports.ExtentLogger;
 
 public class ActionClass {
 
@@ -20,8 +21,9 @@ public class ActionClass {
 	 * 
 	 * @parameter element
 	 */
-	protected void click(ExplicitWaitCondition condition, By element) {
-		findElement(condition, element).click();
+	protected void click(ExplicitWaitCondition condition, By element,String elementName) {
+		findElement(condition, element,elementName).click();
+		ExtentLogger.pass(elementName+"Has been Clicked Successfully");
 	}
 
 	/*
@@ -33,8 +35,9 @@ public class ActionClass {
 	 * 
 	 * @parameter key
 	 */
-	protected void enterText(ExplicitWaitCondition condition, By element, String key) {
+	protected void enterText(ExplicitWaitCondition condition, By element, String key,String elementName) {
 		explicitWait(condition, element).sendKeys(key);
+		ExtentLogger.pass(elementName+"Has been Entered Successfully");
 	}
 
 	/*
@@ -45,8 +48,10 @@ public class ActionClass {
 	 * 
 	 * @parameter element
 	 */
-	protected WebElement findElement(ExplicitWaitCondition condition, By element) {
-		return explicitWait(condition, element).findElement(element);
+	protected WebElement findElement(ExplicitWaitCondition condition, By element, String elementName) {
+			ExtentLogger.pass(elementName+"Has been Found Successfully");
+			return explicitWait(condition, element).findElement(element);
+
 	}
 
 	/*

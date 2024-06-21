@@ -6,7 +6,7 @@ package com.myteststore.enums;
 public enum PathConstants {
 	USERDIRECTORY, PROPERTYFILEPATH, EXCELFILEPATH;
 
-	public static String getUSERDIRECTORY() {
+	private static String getUSERDIRECTORY() {
 		return System.getProperty("user.dir");
 	}
 
@@ -17,4 +17,5 @@ public enum PathConstants {
 	public static String getEXCELFILEPATH() {
 		return getUSERDIRECTORY() + "\\src\\test\\resources\\testdata\\testdata.xlsx";
 	}
+	
 }

@@ -6,8 +6,10 @@
       <class name="com.myteststore.testcases.LoginTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testcase1"/>
           <include name="setUp"/>
+          <include name="beforeSuite"/>
+          <include name="loginTest" invocation-numbers="0"/>
+          <include name="fludhReport"/>
         </methods>
       </class> <!-- com.myteststore.testcases.LoginTest -->
     </classes>

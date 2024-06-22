@@ -7,9 +7,9 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="afterSuite"/>
           <include name="beforeSuite"/>
           <include name="loginTest" invocation-numbers="0"/>
-          <include name="fludhReport"/>
         </methods>
       </class> <!-- com.myteststore.testcases.LoginTest -->
     </classes>
